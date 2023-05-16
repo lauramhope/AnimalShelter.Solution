@@ -2,7 +2,7 @@
   Layout = "_Layout";
 }
 
-@model ToDoList.Models.Item
+@model AnimalShelter.Models.Animal
 
 <h4>Add a new task</h4>
 @using (Html.BeginForm())
@@ -11,4 +11,4 @@
     @Html.TextBoxFor(model => model.Description)
     <input type="submit" value="Add new task" />
 }
-<p>@Html.ActionLink("Show all items", "Index")</p>
+<p>@Html.ActionLink("Show all animals", "Index")</p>
