@@ -10,12 +10,15 @@
 {
   <h3>No animals have been added yet!</h3>
 } 
-
-<ul>
-  @foreach(Animal animal in Model)
-  {
-      <li>@Html.ActionLink($"{animal.Name}", "Details", new { id = animal.AnimalId })</li>
-  }
-</ul>
+else
+{
+  <ul>
+    @foreach (Animal animal in Model)
+    {
+      <li>@Html.ActionLink($"{animal.Name}", "Details", new { id = animal.AnimalId }) | @animal.Category.Species</li>
+    }
+  </ul>
+}
 
 <p>@Html.ActionLink("Add new animal", "Create")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>

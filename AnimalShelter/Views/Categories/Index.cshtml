@@ -1,0 +1,23 @@
+@{
+  Layout = "_Layout";
+}
+
+@using AnimalShelter.Models;
+
+<h1>Categories</h1>
+
+@if (@Model.Count == 0)
+{
+  <h3>No categories have been added yet!</h3>
+} 
+
+<ul>
+  @foreach(Category category in Model)
+  {
+    <li>@Html.ActionLink($"{category.Species}", "Details", new { id = category.CategoryId })</li>
+  }
+</ul>
+
+<p>@Html.ActionLink("Add new category", "Create")</p>
+<p>@Html.ActionLink("Add new Animal", "Create", "Animals")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
