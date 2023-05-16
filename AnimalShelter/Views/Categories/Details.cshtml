@@ -19,7 +19,7 @@ else
   <ul>
     @foreach (Animal animal in Model.Animals)
     {
-      <li>@Html.ActionLink($"{animal.Description}", "Details", "Animals", new { id = animal.AnimalId })</li>
+      <li>@Html.ActionLink($"{animal.Name}", "Details", "Animals", new { id = animal.AnimalId })</li>
     }
   </ul>
 }
